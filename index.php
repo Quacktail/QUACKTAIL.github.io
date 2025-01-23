@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuackTail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="icon" type="image/vnd.icon" href="img/icona.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img class="logo" src="img/logo.png" alt="logo">
+            <a class="navbar-brand" href="index.php">QUACKTAIL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatti.html">Contatti</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Seleziona la ricerca
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="php/pernome.php">Nome Cocktail</a></li>
+                            <li><a class="dropdown-item" href="php/peringrediente.php">Ingrediente Cocktail</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div id="card-container" class="row">
+            <?php for ($i = 0; $i < 6; $i++): ?>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;" id="card-<?php echo $i; ?>">
+                        <img class="card-img-top" alt="Immagine del cocktail">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text tipo"></p>
+                            <p class="card-text istruzioni"></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endfor; ?>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="img/logo.png" alt="Immagine Sinistra">
+            </div>
+            <div class="footer-center">
+                <p class="footer-text">"La tua destinazione per cocktail unici e indimenticabili!"</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://www.terranovasoftware.eu/"><img src="img/terranova.png" alt="Immagine Destra">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>QuackTail è un progetto di Spiriti Liberi in collaborazione con Terranova Software. Tutti i diritti
+                riservati.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
